@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/vue.min.js"></script>
+    <style>
+        .father{
+            width:500px ;
+            height: 500px;
+            background: blueviolet;
+        }
+        .son{
+            width: 250px;
+            height: 250px;
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="father" @mouseover="alert('')">
+            <div class="son" @mouseover.stop="alert('~_~')"></div>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+    })
+</script>
+</html>

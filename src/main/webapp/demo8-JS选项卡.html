@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <style type="text/css">
+        div{
+            width: 200px;
+            height: 200px;
+            background: darkorange;
+            display: none;
+        }
+        .block{
+            display: block;
+        }
+        .current{
+            background: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="按钮一" class="current"/>
+    <input type="button" value="按纽二" >
+    <input type="button" value="按钮三" >
+    <div class="block">你看啥</div>
+    <div >还看</div>
+    <div>削你啊</div>
+</body>
+<script type="text/javascript">
+    $('input').click(function () {
+        $(this).addClass('current').siblings().removeClass('current')
+        $('div').eq($(this).index()).addClass('block').siblings().removeClass('block')
+
+    })
+</script>
+</html>

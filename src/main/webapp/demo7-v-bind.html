@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+    <style>
+        .red{
+            color: cornflowerblue;
+        }
+        .big{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>简历</p>
+        <p class="red big">阿旭</p>
+        <p :class="{red:isRed,dig:isBig}">20</p>
+        <p :class="[ok?'red':'','big']">175</p>
+        <p :class="[showred,'big']">120</p>
+        <a :href="url">帅</a>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            isRed:true,
+            isBig:true,
+            ok:true,
+            showred:'red',
+            url:"http://www.baidu.com"
+        }
+    });
+</script>
+</html>

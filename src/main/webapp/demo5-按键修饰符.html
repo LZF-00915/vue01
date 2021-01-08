@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+<div class="app">
+   用户名: <input type="text" name="username" @keydown.enter="submit">
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el:".app",
+        data:{
+
+        },
+        methods:{
+            submit:function () {
+                alert("输入成功");
+            }
+        }
+    });
+</script>
+</html>

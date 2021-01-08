@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on:单击事件</title>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+        <button @click="fun('good')">改变</button>
+    </div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            message:"哈喽!憨憨",
+        },
+        methods:{
+            fun:function (msg) {
+                this.message=msg;
+            }
+        }
+
+    });
+</script>
+</body>
+</html>
